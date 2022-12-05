@@ -1,0 +1,280 @@
+@font-face {
+  font-family: "courier_new";
+  src: url(web_fonts/courier_new/cour.ttf) format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "courier_new";
+  src: url(web_fonts/courier_new/courbd.ttf) format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "modern20";
+  src: url(web_fonts/modern_20/MOD20.TTF) format("truetype");
+}
+
+@font-face {
+  font-family: "franklin_gothic";
+  src: url(web_fonts/franklin_gothic/FRADM.TTF) format("truetype");
+}
+
+@font-face {
+  font-family: "vivaldi";
+  src: url(web_fonts/vivaldi/VIVALDII.TTF) format("truetype");
+}
+
+main {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: right;
+  font-family: "franklin_gothic";
+  font-size: 4rem;
+  background: url(pictures/black.jpg);
+  background-size: cover;
+  background-position: top;
+  position: sticky;
+  bottom: 100vh;
+}
+
+mark {
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+  background-color: black;
+}
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+  background-color: black;
+}
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+  background-color: black;
+}
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+}
+.menu__btn {
+  position: absolute;
+  top: 36px;
+  left: 16px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  z-index: 2;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  transition-duration: 0.25s;
+}
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background: url(pictures/paper.jpg);
+  background-size: cover;
+  box-shadow: 2px 2px 6px black;
+  transition-duration: 0.25s;
+  z-index: 1;
+}
+.menu__item {
+  font-family: "modern20";
+  display: block;
+  padding: 12px 24px;
+  color: black;
+  font-size: 1.5rem;
+  letter-spacing: 0.5ch;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: 0.25s;
+}
+.menu__item:hover {
+  text-decoration: line-through 2px;
+}
+
+.logo {
+  position: absolute;
+  right: 16px;
+  overflow: auto;
+}
+
+footer {
+  font-family: "modern20";
+  font-size: 1.5rem;
+  padding-block: 20px;
+  letter-spacing: 0.5ch;
+  text-align: center;
+  background: url(pictures/black.jpg);
+  background-size: cover;
+  background-position: center;
+  position: sticky;
+  top: 100vh;
+}
+
+:root {
+  font-size: 16px;
+}
+
+* {
+  all: unset;
+  display: revert;
+  cursor: revert;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "courier_new";
+  min-height: 100vh;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  align-self: stretch;
+  object-fit: cover;
+}
+
+h1 {
+  color: black;
+  font-family: "franklin_gothic";
+  font-size: 3.5rem;
+  margin: 40px 20px;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: black;
+  font-family: "modern20";
+  font-size: 2rem;
+  margin: 20px;
+  font-weight: 700;
+  letter-spacing: 0.1ch;
+  text-transform: uppercase;
+}
+
+h3 {
+  display: inline-block;
+  color: black;
+  font-family: "modern20";
+  font-size: 1.5rem;
+  margin: 20px;
+  font-weight: 700;
+  letter-spacing: 0.1ch;
+  border: 1px, black;
+}
+
+main p {
+  background-color: black;
+  padding: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.75;
+  max-width: 65ch;
+}
+
+body {
+  background-attachment: fixed;
+  background-image: url(pictures/bg_phone.png);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  max-width: none;
+  margin: 0;
+  background-repeat: no-repeat;
+}
+
+.splash {
+  background-attachment: fixed;
+  background-image: url(pictures/sp_phone.png);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  max-width: none;
+  margin: 0;
+  background-repeat: no-repeat;
+}
+
+.mb {
+  margin-bottom: 2rem;
+}
+
+.title_2 h2 {
+  color: white;
+  font-family: "vivaldi";
+  font-size: 1.5rem;
+  text-transform: none;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: black;
+  padding: 20px;
+}
+
+@media (min-width: 600px) {
+  body {
+    background-image: url(pictures/bg_tablet.png);
+  }
+
+  .splash {
+    background-image: url(pictures/sp_tablet.png);
+  }
+}
+
+@media (min-width: 800px) and (orientation: landscape) {
+  img {
+    margin: 0;
+  }
+
+  main {
+    margin-bottom: 50px;
+  }
+
+  body {
+    background-image: url(pictures/bg_desktop.png);
+  }
+
+  .splash {
+    background-image: url(pictures/sp_desktop.png);
+  }
+
+  .title_1 {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
